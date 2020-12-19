@@ -1,0 +1,1 @@
+import "./flappy-bird.ts";

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="/node_modules/flappy-bird/flappy-bird.js"></script>
+    <title>Flappy Bird</title>
+  </head>
+
+  <body>
+    <div id="container" style="height: 700px">
+      <flappy-bird></flappy-bird>
+    </div>
+
+    <script>
+      let container = document.getElementById("container");
+      let scaleX = container.clientWidth / 323;
+      let scaleY = container.clientHeight / 525;
+      let scale = Math.min(scaleX, scaleY);
+      container.firstElementChild.scale = scale;
+    </script>
+
+  </body>
+
+</html>
